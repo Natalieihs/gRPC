@@ -25,9 +25,11 @@ namespace GrpcService1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJQcm90b3MvZ3JlZXQucHJvdG8SBWdyZWV0IhwKDEhlbGxvUmVxdWVzdBIM",
-            "CgRuYW1lGAEgASgJIh0KCkhlbGxvUmVwbHkSDwoHbWVzc2FnZRgBIAEoCTI9",
+            "CgRuYW1lGAEgASgJIh0KCkhlbGxvUmVwbHkSDwoHbWVzc2FnZRgBIAEoCTJ6",
             "CgdHcmVldGVyEjIKCFNheUhlbGxvEhMuZ3JlZXQuSGVsbG9SZXF1ZXN0GhEu",
-            "Z3JlZXQuSGVsbG9SZXBseUIPqgIMR3JwY1NlcnZpY2UxYgZwcm90bzM="));
+            "Z3JlZXQuSGVsbG9SZXBseRI7Cg9TYXlIZWxsb1N0cmVhbTESEy5ncmVldC5I",
+            "ZWxsb1JlcXVlc3QaES5ncmVldC5IZWxsb1JlcGx5MAFCD6oCDEdycGNTZXJ2",
+            "aWNlMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -40,7 +42,7 @@ namespace GrpcService1 {
   }
   #region Messages
   /// <summary>
-  /// The request message containing the user's name.
+  /// The request message containing the user's name.111
   /// </summary>
   public sealed partial class HelloRequest : pb::IMessage<HelloRequest> {
     private static readonly pb::MessageParser<HelloRequest> _parser = new pb::MessageParser<HelloRequest>(() => new HelloRequest());

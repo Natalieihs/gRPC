@@ -25,6 +25,13 @@ namespace GrpcService1 {
         __Marshaller_greet_HelloRequest,
         __Marshaller_greet_HelloReply);
 
+    static readonly grpc::Method<global::GrpcService1.HelloRequest, global::GrpcService1.HelloReply> __Method_SayHelloStream1 = new grpc::Method<global::GrpcService1.HelloRequest, global::GrpcService1.HelloReply>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "SayHelloStream1",
+        __Marshaller_greet_HelloRequest,
+        __Marshaller_greet_HelloReply);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -46,6 +53,11 @@ namespace GrpcService1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      public virtual global::System.Threading.Tasks.Task SayHelloStream1(global::GrpcService1.HelloRequest request, grpc::IServerStreamWriter<global::GrpcService1.HelloReply> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -53,7 +65,8 @@ namespace GrpcService1 {
     public static grpc::ServerServiceDefinition BindService(GreeterBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_SayHello, serviceImpl.SayHello).Build();
+          .AddMethod(__Method_SayHello, serviceImpl.SayHello)
+          .AddMethod(__Method_SayHelloStream1, serviceImpl.SayHelloStream1).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -63,6 +76,7 @@ namespace GrpcService1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GreeterBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_SayHello, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcService1.HelloRequest, global::GrpcService1.HelloReply>(serviceImpl.SayHello));
+      serviceBinder.AddMethod(__Method_SayHelloStream1, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::GrpcService1.HelloRequest, global::GrpcService1.HelloReply>(serviceImpl.SayHelloStream1));
     }
 
   }

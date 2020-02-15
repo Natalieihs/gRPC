@@ -25,6 +25,13 @@ namespace GrpcService1 {
         __Marshaller_greet_HelloRequest,
         __Marshaller_greet_HelloReply);
 
+    static readonly grpc::Method<global::GrpcService1.HelloRequest, global::GrpcService1.HelloReply> __Method_SayHelloStream1 = new grpc::Method<global::GrpcService1.HelloRequest, global::GrpcService1.HelloReply>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "SayHelloStream1",
+        __Marshaller_greet_HelloRequest,
+        __Marshaller_greet_HelloReply);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -97,6 +104,14 @@ namespace GrpcService1 {
       public virtual grpc::AsyncUnaryCall<global::GrpcService1.HelloReply> SayHelloAsync(global::GrpcService1.HelloRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SayHello, null, options, request);
+      }
+      public virtual grpc::AsyncServerStreamingCall<global::GrpcService1.HelloReply> SayHelloStream1(global::GrpcService1.HelloRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SayHelloStream1(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncServerStreamingCall<global::GrpcService1.HelloReply> SayHelloStream1(global::GrpcService1.HelloRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_SayHelloStream1, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override GreeterClient NewInstance(ClientBaseConfiguration configuration)

@@ -23,6 +23,22 @@ namespace GrpcService1
             });
         }
 
-      
+        public async override Task SayHelloStream1(HelloRequest request, IServerStreamWriter<HelloReply> responseStream, ServerCallContext context)
+        {
+            var counter = 0;
+
+            while (!context.CancellationToken.IsCancellationRequested)
+            {
+                var message = $"How are you {request.Name}? {++counter}";
+
+                _logger.LogInformation($"Sending greeting {message}.");
+
+                await responseStream.WriteAsync(new HelloReply { Message = message });
+
+                // Gotta look busy
+                await Task.Delay(1000);
+            }
+        }
+
     }
 }
