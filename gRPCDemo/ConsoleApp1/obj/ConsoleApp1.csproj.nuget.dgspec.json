@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal\\Desktop\\gRPC\\gRPCDemo\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "D:\\Personal\\Desktop\\gRPC\\gRPC\\gRPCDemo\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "D:\\Personal\\Desktop\\gRPC\\gRPCDemo\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "D:\\Personal\\Desktop\\gRPC\\gRPC\\gRPCDemo\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\Desktop\\gRPC\\gRPCDemo\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "D:\\Personal\\Desktop\\gRPC\\gRPC\\gRPCDemo\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "D:\\Personal\\Desktop\\gRPC\\gRPCDemo\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectPath": "D:\\Personal\\Desktop\\gRPC\\gRPC\\gRPCDemo\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\Desktop\\gRPC\\gRPCDemo\\ConsoleApp1\\obj\\",
+        "outputPath": "D:\\Personal\\Desktop\\gRPC\\gRPC\\gRPCDemo\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,10 @@
             "Grpc.Net.Client": {
               "target": "Package",
               "version": "[2.27.0, )"
+            },
+            "Grpc.Net.ClientFactory": {
+              "target": "Package",
+              "version": "[2.23.2, )"
             },
             "Grpc.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

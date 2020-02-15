@@ -14,6 +14,7 @@ namespace ConsoleApp1
          Install-Package Grpc.Tools
          把服务端的接口复制一份
          修改项目文件为Client
+         服务端修改后，客户端同步修改  添加为连接
              */
         static async Task Main(string[] args)
         {
@@ -21,7 +22,7 @@ namespace ConsoleApp1
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
             //创建客户端
             var client = new GreeterClient(channel);
-            var replay = await client.SayHelloAsync(new GrpcService1.HelloRequest { Name = "bing" });
+            var replay = await client.SayHelloAsync(new GrpcService1.HelloRequest { Name = "bing111" });
             Console.WriteLine(replay.Message);
             Console.WriteLine("Hello World!");
             Console.ReadLine();
